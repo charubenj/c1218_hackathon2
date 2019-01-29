@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <title>Title</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF979WtL3iu2NSP5fsDacQ8urtWkuPPug&callback=initMap" type="text/javascript"></script>
+
+    <script>
+        $(document).ready( startApp );
+
+        function startApp(){
+            checkApi();
+            initMap();
+        }
+
+        function checkApi() {
+            console.log('working...');
+
+            var apiStuff = {
+                url: "http://danielpaschal.com/lfzproxies/yelpproxy.php?term=brewery&location=irvine",
+                method: 'get',
+                dataType: 'json',
+                data: {api_key: 'W65fNfobJPv2Ktfhu2f6Uox1BzTMceGzBuDu6ua7PAKXGJTx1oQjCHbuYuqDvLISCsCGl_9J4BUVYJMFmPxZordWAcP13859-LOZdYHu6s4D_x2xdvLXZmBJVLRPXHYx'},
+                success: functionCheck
+            };
+
+            function functionCheck(response) {
+                console.log(response);
+
+                console.log('Did it work?')
+            }
+
+            console.log('calling');
+            $.ajax(apiStuff);
+            console.log('ending ajax call');
+        }
+
+        function initMap() {
+            var uluru = {lat: -25.344, lng: 131.036};
+            var map = new google.maps.Map(
+                document.getElementById('map'), {zoom: 4, center: uluru});
+            var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+    <style>
+        #map{
+            width: 100%;
+            height: 400px;
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+
+</body>
+</html>
