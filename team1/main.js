@@ -5,11 +5,18 @@ $(document).ready(initializeApp)
 
 function initializeApp(){
 
-    var app=new App({
+
+
+    /*$("#getWeather").click(function(event){
+        alert('hello');
+
+    }); */
+
+     var app=new App({
         weatherButton: $("#getWeather"),
         weatherResult: $("#weatherResult"),
     });
-    app.addEventhandlers();
+    app.addEventhandlers();//  */
 
 
 
