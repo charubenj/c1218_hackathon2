@@ -32,7 +32,7 @@ function initializeApp(){
 
     function clickModal() {
         modal.style.display = "block";
-        // leftCoastModal.src = $(this).data('src');
+        //incase image that doesn't work
         captionText.innerHTML = $(this).data('alt');
     }
 

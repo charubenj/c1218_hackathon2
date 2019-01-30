@@ -22,7 +22,6 @@ class Search {
                 location: 'irvine'
             },
             headers: {
-                // apikey: '91cde05bc82f232037d522030640b69a'
                 apikey: 'W65fNfobJPv2Ktfhu2f6Uox1BzTMceGzBuDu6ua7PAKXGJTx1oQjCHbuYuqDvLISCsCGl_9J4BUVYJMFmPxZordWAcP13859-LOZdYHu6s4D_x2xdvLXZmBJVLRPXHYx'
             },
             //if this call is successful run the function that adds the name to the DOM
