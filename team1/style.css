@@ -61,29 +61,87 @@ body {
 /*.beginButton:hover {*/
     /*opacity: 1;*/
 /*}*/
-.sunButton {
-    background: url("images/weather app.png");
-}
+/*.sunButton {*/
+    /*background-image: url("images/weather app.png");*/
+  /*}*/
 
 
 #getWeather{
-     width:20%;
-    height:50px;
-    font-size: 20px;
-    padding: 0 3%;
-    border-radius: 20%;
-    text-rendering: auto;
+
+    background: url("images/weather app.png") no-repeat left center;
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 25%;
+    height: 120px;
+    border-radius: 17%;
+    margin: 30px;
+
+
 }
 
 #temp{
     height: 200px;
     width: 100px;
     background-color: #d9534f;
+
 }
 
+
+
+.taxi {
+
+    margin: 30px;
+
+}
+
+.topPart,
 .navBar{
     width: 100%;
     height: 20%;
 
 }
+
+.theGoogle {
+    background-image: url("images/search.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 25%;
+    height: 120px;
+    border-radius: 17%;
+    margin: 30px;
+
+
+
+
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+
+}
+
+.middlePart {
+    height: 60%;
+    display: flex;
+}
+
+.goldStar {
+    background-image: url("images/goldStar.jpeg");
+    background-repeat: no-repeat;
+    background-position: left center;
+    width: 25%;
+    height: 120px;
+    border-radius: 17%;
+    margin: 30px;
+
+
+}
+
+/*.goldStar .theGoogle .taxi .sunButton {*/
+    /*width: 25%;*/
+    /*height: 120px;*/
+    /*border-radius: 17%;*/
+
+/*}*/
 

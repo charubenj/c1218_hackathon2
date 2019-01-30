@@ -27,16 +27,22 @@
     <input class="searchInput">
 </div>
 
+<div id="weatherResult">temp</div>
+
+<div class="topPart"></div>
+<div class="middlePart"></div>
+
 <div class="navBar">
-    <button id="addSearchButton">Search</button>
+    <button class="theGoogle" id="addSearchButton"></button>
     <div id="ajax-response"></div>
+    <a href="haze.html"><button class="sunButton" id="getWeather"></button></a>
+    <div class="goldStar" ></div>
+    <div class="taxi" id="lyft-web-button-parent"></div>
 
-    <button class="sunButton" id="getWeather">Get Weather</button>
-    <div id="weatherResult">temp</div>
-
-    <div id="lyft-web-button-parent"></div>
 </div>
-<script type="text/javascript">
+
+
+<script class="myTaxi" type="text/javascript">
     var OPTIONS = {
         scriptSrc: 'lyftWebButton.js',
         namespace: '',
