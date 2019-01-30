@@ -16,7 +16,8 @@ input {
     width: 20px;
 }
 
-.hidden {
+/*hide favorite list container until clicked*/
+.favoriteListContainer {
     display: none;
 }
 
