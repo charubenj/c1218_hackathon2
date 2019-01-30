@@ -1,9 +1,10 @@
-class Weather {
+class Weatherapi {
 
     constructor() {
         this.apiKey = '0c008c0a614253e7f6e8f6d8bb2e62bc';
         this.unit = 'imperial';
         this.url = 'https://api.openweathermap.org/data/2.5/weather';
+        this.codetoCityMapping=['Irvine','New york','Los Angeles','Austin','Boston','London']
         this.codetoClassMapping = {
             'thunderstorm with light rain': 'thunderstorm',
             'thunderstorm with rain': 'thunderstorm',

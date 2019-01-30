@@ -1,8 +1,7 @@
 class App {
 
     constructor(object) {
-        this.weather = new Weather();//making object of wether class
-        this.googleMap = new GoogleMap();
+        this.weather = new Weatherapi();//making object of wether class
         this.object = object;
         this.addEventhandlers = this.addEventhandlers.bind(this);
         //this.getCityWeather= this.getCityWeather.bind(this);
@@ -16,7 +15,7 @@ class App {
         object.weatherButton.click(function () {
             var currentdate = new Date();
             //debugger;
-            weather.getCityWeather('New york', function (weatherResponse, forecastClass) {
+            weather.getCityWeather('Boston', function (weatherResponse, forecastClass) {
                 console.log("new   *********** testing");
                 //debugger;
                 var minTemp = weatherResponse.main.temp_min;
@@ -36,7 +35,7 @@ class App {
                 object.maxtemp.html("Maximum Temp : " + maxTemp);
                 object.avgtemp.html("Today's Avg Temp " + temp);
                 object.description.html(description);
-                //object.temperature.html(temp);
+
             })
         })
     }

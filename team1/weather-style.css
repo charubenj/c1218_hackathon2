@@ -6,8 +6,7 @@ body{
     /* background-image: url("image/weather-image.jpg"); */
 
 }
-
- #getWeather{
+#getWeather{
      width:150px;
     height:50px;
     background-color: olive;
@@ -23,16 +22,6 @@ body{
     background-color: #d9534f;
 }
 
-
-
-/* #header{
-    width:100%;
-    heigth:100px;
-    display: inline-block;
-
-
-
-} */
 
 .container {
     margin: 50px;
