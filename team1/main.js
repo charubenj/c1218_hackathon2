@@ -11,17 +11,16 @@ function initializeApp(){
         alert('hello');
 
     }); */
+    $("#searchButton").click(function(){
+        console.log ("search button was clicked ");
+    })
+
+    new Search();
+
 
      var app=new App({
         weatherButton: $("#getWeather"),
         weatherResult: $("#weatherResult"),
     });
     app.addEventhandlers();//  */
-
-
-
-
-
-
-
 }
