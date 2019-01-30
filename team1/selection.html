@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Brewery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script type="text/javascript" src="api/weather.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="sec2">
+<!--<div class="landing">-->
+    <!--<div class="info">Draft Pick</div>-->
+    <!--<div class="middleInfo">Finding your new favorite brewery just got easier.</div>-->
+    <!--<div class="innerText"></div>-->
+    <!--<a class="button" href="../index.html">Let's Get Started</a>-->
+<!--</div>-->
+
+
+<div class="search">
+    <button id="searchButton">Search</button>
+    <input class="searchInput">
+</div>
+
+<div class="navBar">
+    <button id="addSearchButton">Search</button>
+    <div id="ajax-response"></div>
+
+    <button class="sunButton" id="getWeather">Get Weather</button>
+    <div id="weatherResult">temp</div>
+
+    <div id="lyft-web-button-parent"></div>
+</div>
+<script type="text/javascript">
+    var OPTIONS = {
+        scriptSrc: 'lyftWebButton.js',
+        namespace: '',
+        clientId: 'LX5t1r7CbiWr',
+        clientToken: 'PHrsriG9akj8w9A3PKy59xm74G21jyg/5fDAgeTyI/R85GhGU7uWCJCduOmaWRajdwuZgLjvyA0q6nGv5mbvj7/kXK2Pvw1GxKpdCN/APhi5QBRw5Qh7o1o=',
+        location: {
+            pickup: {},
+            destination: {
+                latitude: '37.776503000',
+                longitude: '-122.392038500',
+            },
+        },
+        parentElement: document.getElementById('lyft-web-button-parent'),
+        queryParams: {
+            credits: ''
+        },
+        theme: 'multicolor large',
+    };
+    (function(t) {
+        var n = this.window,
+            e = this.document;
+        n.lyftInstanceIndex = n.lyftInstanceIndex || 0;
+        var a = t.parentElement,
+            c = e.createElement("script");
+        c.async = !0, c.onload = function() {
+            n.lyftInstanceIndex++;
+            var e = t.namespace ? "lyftWebButton" + t.namespace + n.lyftInstanceIndex : "lyftWebButton" + n.lyftInstanceIndex;
+            n[e] = n.lyftWebButton, t.objectName = e, n[e].initialize(t)
+        }, c.src = t.scriptSrc, a.insertBefore(c, a.childNodes[0])
+    }).call(this, OPTIONS);
+</script>
+
+
+
+</body>
+</html>

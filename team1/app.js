@@ -29,24 +29,8 @@ class App{
                 var currentCityTemp=cityName+" max temp is "+maxTemp+"and min temp is "+maxTemp;
                 console.log(currentCityTemp)
                 object.weatherResult.html(currentCityTemp);
-
-
-
-
             })
 
         })
-
-
-
-
     }
-
-
-
-
-
-
-
-
 }
