@@ -1,6 +1,5 @@
 // var url = "https://danielpaschal.com/lfzproxies/";
 
-
 class Search {
     constructor(){
         this.handleSearch = this.handleSearch.bind(this);
@@ -8,13 +7,13 @@ class Search {
     }
 
     addEventHandlers(){
+        //if i click the searchButton use the handleSearch function
+        //handleSearch will have the ajax call
         $('#searchButton').click(this.handleSearch);
-        // $('img').attr('images/leftcoast.jpg');
     }
 
     handleSearch () {
         var apiStuff = {
-            // url: 'https://www.zomato.com/orange-county/drinks-and-nightlife-in-irvine',
             url: "https://danielpaschal.com/lfzproxies/yelpproxy.php?term=restaurant&location=irvine",
             method: 'get',
             dataType: 'json',
@@ -26,12 +25,17 @@ class Search {
                 // apikey: '91cde05bc82f232037d522030640b69a'
                 apikey: 'W65fNfobJPv2Ktfhu2f6Uox1BzTMceGzBuDu6ua7PAKXGJTx1oQjCHbuYuqDvLISCsCGl_9J4BUVYJMFmPxZordWAcP13859-LOZdYHu6s4D_x2xdvLXZmBJVLRPXHYx'
             },
-            success: functionCheck
+            //if this call is successful run the function that adds the name to the DOM
+            success: addResponseData
         };
 
-        function functionCheck(response) {
-            console.log(response);
-            $('#ajax-response').text(JSON.stringify(response.name));
+        function addResponseData(response) {
+            $('#ajax-response')
+
+            //find the ajax response element add the star image
+            //return the content of response.name into the span div,and add star image inline
+                .html(`<span class="response-name">${response.name}</span><img src="images/star.jpg" class="star">`)
+
         }
 
         $('#ajax-response').text( );
@@ -39,11 +43,4 @@ class Search {
 
     }
 
-
-
-    // handleNavBar(handleSearch){
-    //
-    //
-    // }
 }
-
