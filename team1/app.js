@@ -21,21 +21,16 @@ class App {
             var currentdate =  new Date();
 
             //debugger;
-            weather.getCityWeather('Chicago', function (weatherResponse, forecastClass) {
+            weather.getCityWeather('Irvine', function (weatherResponse, forecastClass) {
                 console.log("new   *********** testing");
                 //debugger;
                 var minTemp = weatherResponse.main.temp_min;
-
                 var maxTemp = weatherResponse.main.temp_max;
-
                 var temp = weatherResponse.main.temp;
-
                 var cityName = weatherResponse.name;
                 var description= weatherResponse.weather[0].description;
-
                 var forecast = weatherResponse.weather[0].description;
                 console.log(forecast);
-
                 $("body").addClass(forecastClass);
                 var currentCityTemp = cityName + " max temp is " + maxTemp + "and min temp is " + maxTemp;
 
@@ -53,17 +48,11 @@ class App {
             })
 
         })
-        object.brewriesInfo.click(function () {
-            debugger;
-            googleMap.apiStuff(function (yelpResponse) {
-                debugger;
-                var name = yelpResponse.id
-                console.log("testing " + name)
-                object.brewriesInfo.html(name);
-            })
 
+function cityName(){
+            var cityValue=$("#enter-city-name").val();
 
-        })
+}
 
 
     }

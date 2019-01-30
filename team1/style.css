@@ -48,6 +48,10 @@ body{
     position: relative;
     padding-left: 15px;
     height:170px;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 
 }
 
@@ -69,7 +73,7 @@ background-image: url("image/thunderStrom.jpg");
     background-image: url("image/cloudy.jpeg");
 }
  .atmosphere{
-     background-image: url("image/atomsphere.jpg");
+     background-image: url("image/foggy2.jpg");
  }
 
  .clear{
@@ -78,26 +82,31 @@ background-image: url("image/thunderStrom.jpg");
 
 
 .cityName{
-
     font-size: 40px;
     margin-right: 12px;
-    /* background-color: #204387; */
     width:200px;
     margin-top: 20px;
     width: 25%;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 }
 .dateandtime{
      color: white;
      font-size: 20px;
      margin-right: 12px;
-     /* background-color: #204387; */
      width:200px;
-     margin-top: 20px;
-     height:160px;
+    height:160px;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
 
  }
 
  #currentDateandTime{
+     color: #212121;
      higth:100px;
      width:200px;
      color: whitesmoke;
@@ -105,6 +114,11 @@ background-image: url("image/thunderStrom.jpg");
 
  .description{
      font-size: 30px;
+     text-shadow: -1px -1px 0 black,
+     1px -1px 0 black,
+     -1px 1px 0 black,
+     1px 1px 0 black;
+
  }
  .input-data{
      width:150px;
