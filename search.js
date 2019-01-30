@@ -1,3 +1,6 @@
+// var url = "https://danielpaschal.com/lfzproxies/";
+
+
 class Search {
     constructor(){
         this.handleSearch = this.handleSearch.bind(this);
@@ -6,6 +9,7 @@ class Search {
 
     addEventHandlers(){
         $('#searchButton').click(this.handleSearch);
+        // $('img').attr('images/leftcoast.jpg');
     }
 
     handleSearch () {
@@ -24,12 +28,16 @@ class Search {
         };
 
         function functionCheck(response) {
+            console.log(response);
             $('#ajax-response').text(JSON.stringify(response.name));
         }
 
         $('#ajax-response').text( );
         $.ajax(apiStuff);
+
     }
+
+
 
     // handleNavBar(handleSearch){
     //
