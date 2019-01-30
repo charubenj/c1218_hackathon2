@@ -7,10 +7,11 @@ function initializeApp(){
     });
 
     // Open modal on ajax response click
-    $(document).on('click', '#ajax-response .response-name', clickModal);
+    $(document).on('click', '.response-name', clickModal);
+    console.log('clicked text from ajax call');
 
-    // Clicked star
-    $(document).on('click', '.star', function( ) {
+    //click star run
+    $(document).on('click', '.star', function() {
         console.log('added to favorites list!');
         var name = $('#ajax-response').text();
         // find favorite list element
