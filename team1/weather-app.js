@@ -15,7 +15,7 @@ class App {
         object.weatherButton.click(function () {
             var currentdate = new Date();
             //debugger;
-            weather.getCityWeather('Boston', function (weatherResponse, forecastClass) {
+            weather.getCityWeather('Irvine', function (weatherResponse, forecastClass) {
                 console.log("new   *********** testing");
                 //debugger;
                 var minTemp = weatherResponse.main.temp_min;
@@ -35,6 +35,7 @@ class App {
                 object.maxtemp.html("Maximum Temp : " + maxTemp);
                 object.avgtemp.html("Today's Avg Temp " + temp);
                 object.description.html(description);
+                $(".navBar").hide();
 
             })
         })
