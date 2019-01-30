@@ -1,9 +1,13 @@
-.body{
-    height:100%;
+body{
+    height: 100%;
     width:100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: url("image/weather-image.jpg"); */
+
 }
 
-#getWeather{
+ #getWeather{
      width:150px;
     height:50px;
     background-color: olive;
@@ -19,3 +23,96 @@
     background-color: #d9534f;
 }
 
+
+
+/* #header{
+    width:100%;
+    heigth:100px;
+    display: inline-block;
+
+
+
+} */
+
+.container {
+    margin: 50px;
+}
+
+
+.temperature{
+    color: white;
+    font-size: 25px;
+    width: 250px;
+    width: 250px;
+    float: right!important;
+    position: relative;
+    padding-left: 15px;
+    height:170px;
+
+}
+
+.thunderstorm{
+background-image: url("image/thunderStrom.jpg");
+}
+
+.drizzle{
+    background-image: url("image/drizzle.png");
+}
+.rain{
+    background-image:url("image/rainy.jpg");
+}
+.snow{
+    background-image: url("image/snow.jpg");
+
+}
+.cloud{
+    background-image: url("image/cloudy.jpeg");
+}
+ .atmosphere{
+     background-image: url("image/atomsphere.jpg");
+ }
+
+ .clear{
+     background-image: url("image/sunny_background.jpg");
+ }
+
+
+.cityName{
+
+    font-size: 40px;
+    margin-right: 12px;
+    /* background-color: #204387; */
+    width:200px;
+    margin-top: 20px;
+    width: 25%;
+}
+.dateandtime{
+     color: white;
+     font-size: 20px;
+     margin-right: 12px;
+     /* background-color: #204387; */
+     width:200px;
+     margin-top: 20px;
+     height:160px;
+
+ }
+
+ #currentDateandTime{
+     higth:100px;
+     width:200px;
+     color: whitesmoke;
+ }
+
+ .description{
+     font-size: 30px;
+ }
+ .input-data{
+     width:150px;
+     height:50px;
+     background-color: olive;
+     font-size: 20px;
+     padding: 0 3%;
+     border-radius: 20%;
+     text-rendering: auto;
+
+ }

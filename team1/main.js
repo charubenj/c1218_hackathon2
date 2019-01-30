@@ -15,13 +15,15 @@ function initializeApp(){
      var app=new App({
         weatherButton: $("#getWeather"),
         weatherResult: $("#weatherResult"),
+         brewriesInfo: $("#brewriesInfo"),
+         cityName:$(".cityName"),
+         mintemp :$(".min-temp"),
+         maxtemp:$(".max-temp"),
+         avgtemp:$(".avg-temp"),
+         dateandtime:$(".dateandtime"),
+         description:$(".description"),
+
+
     });
-    app.addEventhandlers();//  */
-
-
-
-
-
-
-
+        app.addEventhandlers();
 }
