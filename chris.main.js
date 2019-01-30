@@ -17,7 +17,7 @@ function initializeApp(){
         // find favorite list element
         // append to the div with the response.name
         $('#favorite-list').append('<div>' + name + '</div>');
-        $('h3.hidden').show();
+        $('h3.favoriteListContainer').show();
     });
 
     new Search();
