@@ -1,8 +1,10 @@
 body{
-    height: 100%;
+    height: 100vh;
     width:100%;
     background-repeat: no-repeat;
-    background-size: cover;
+    background: url("image/Irvine.jpg");
+    background-size: 100% 100%;
+    margin: 0%;
     /* background-image: url("image/weather-image.jpg"); */
 
 }
@@ -119,3 +121,10 @@ background-image: url("image/thunderStrom.jpg");
      text-rendering: auto;
 
  }
+
+ /*body {*/
+    /**/
+     /*width: 100%;*/
+     /*height: 100vh;*/
+     /*margin: 0;*/
+ /*}*/
