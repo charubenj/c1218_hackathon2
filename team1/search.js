@@ -25,7 +25,7 @@ class Search {
 
         function functionCheck(response) {
             $('#ajax-response').text(JSON.stringify(response.name));
-        }
+    }
 
         $('#ajax-response').text( );
         $.ajax(apiStuff);
