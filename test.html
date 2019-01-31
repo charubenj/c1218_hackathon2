@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title>Title</title>
-    <!--<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF979WtL3iu2NSP5fsDacQ8urtWkuPPug&callback=initMap" type="text/javascript"></script>-->
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF979WtL3iu2NSP5fsDacQ8urtWkuPPug&libraries=places"></script>
 
 
@@ -14,81 +12,69 @@
         $(document).ready( startApp );
 
         function startApp(){
-           // checkApi();
-            initMap();
-
+           initMap();
         }
 
-        // function checkApi() {
-        //     console.log('working...');
-        //
-        //     var apiStuff = {
-        //         //url: "http://danielpaschal.com/lfzproxies/yelpproxy.php?term=brewery&location=irvine",
-        //         url: 'http://localhost/c1218_hackathon2/server/yelp.php',
-        //         method: 'get',
-        //         dataType: 'json',
-        //         data: {term: 'brewery', location: 'irvine'},
-        //         headers: {apikey: 'W65fNfobJPv2Ktfhu2f6Uox1BzTMceGzBuDu6ua7PAKXGJTx1oQjCHbuYuqDvLISCsCGl_9J4BUVYJMFmPxZordWAcP13859-LOZdYHu6s4D_x2xdvLXZmBJVLRPXHYx'},
-        //         success: functionCheck
-        //     };
-        //
-        //     function functionCheck(response) {
-        //         console.log(response);
-        //
-        //         console.log('Did it work?')
-        //     }
-        //
-        //     console.log('calling');
-        //     $.ajax(apiStuff);
-        //     console.log('ending ajax call');
-        // }
-
-        var myObj = {};
-        myObj.currentLocation = {};
-        //myObj.map = new google.maps.Map(document.getElementById('map'), {zoom: 10, center: this.currentLocation});
-        myObj.searchbox = {};
-        myObj.TestInfoBox = {};
-
         function initMap() {
-                var currentLocation = {lat: 33.6839473, lng: -117.7946942};//Use current location if possible, if not use generalize location
+            var map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 33.6839473, lng: -117.7946942},
+                zoom: 13,
+                mapTypeId: 'roadmap'
+            });
 
-                var map = new google.maps.Map(
-                    document.getElementById('map'), {zoom: 10, center: currentLocation});
-                var marker = new google.maps.Marker({position: currentLocation, map: map});
+            var input = document.getElementById('map-search');
+            var searchBox = new google.maps.places.SearchBox(input);
+            map.controls[google.maps.ControlPosition.TOP_CENTER].push(input);
 
-                var infowindow = new google.maps.InfoWindow({
-                    content: ''
+            map.addListener('bounds_changed', function() {
+                searchBox.setBounds(map.getBounds());
+            });
+
+
+            var markers = [];
+            searchBox.addListener('places_changed', function() {
+                var places = searchBox.getPlaces();
+
+                if (places.length == 0) {
+                    return;
+                }
+
+                markers.forEach(function(marker) {
+                    marker.setMap(null);
                 });
+                markers = [];
 
-                google.maps.event.addListener(marker, 'click', function () {
-                    infowindow.open(map, marker);
-                    map.setZoom(12);
-                    map.setCenter(marker.getPosition());
-                });
-
-                var searchBox = new google.maps.places.SearchBox(document.getElementById('map-search'));
-
-                google.maps.event.addListener(searchBox, 'places_changed', function () {
-                    var places = searchBox.getPlaces();
-                    infowindow.setContent(places[0].name + " " + places[0].formatted_address);
-                    var bounds = new google.maps.LatLngBounds();
-                    var i, place;
-
-                    for (i = 0; place = places[i]; i++) {
-                        bounds.extend(place.geometry.location);
-                        marker.setPosition(place.geometry.location);
+                var bounds = new google.maps.LatLngBounds();
+                places.forEach(function(place) {
+                    if (!place.geometry) {
+                        console.log("Returned place contains no geometry");
+                        return;
                     }
-                    map.fitBounds(bounds);
-                    map.setZoom(12);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: place.geometry.location,
+                        title: place.name,
+                        url: place.url
+                    });
+
+                    google.maps.event.addListener(marker, 'click', function() {
+                        infowindow.open(map, marker);
+                                map.setZoom(18);
+                                map.setCenter(marker.getPosition());
+                    });
+                    markers.push(marker);
+                    var infowindow = new google.maps.InfoWindow();
+
+                    infowindow.setContent('<div><strong>' +place.name+ '</strong><br>' +place.formatted_address+ '<br></div>');
+
+                    if (place.geometry.viewport) {
+                        bounds.union(place.geometry.viewport);
+                    } else {
+                        bounds.extend(place.geometry.location);
+                    }
                 });
-
-            myObj.updateContent = function () {
-                this.TestInfoBox.setContent(this.Places[0].formatted_address);
-            }
-
-            myObj.Places = function () {
-                this.Places = this.searchbox.getPlaces();
-            }
+                map.fitBounds(bounds);
+            });
         }
 
 
@@ -99,12 +85,10 @@
             height: 400px;
             background-color: grey;
         }
-
-
     </style>
 </head>
 <body>
-<input type="text" id="map-search" size="50">
+<input type="text" id="map-search" size="50" value="Brewery">
 <div id="map"></div>
 
 
