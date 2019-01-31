@@ -35,7 +35,7 @@ class Search {
             $('#ajax-response')
             //find the ajax-response element
             //return the content of response.name into the span div,and add star image inline
-                .html(`<span class="response-name">${response.name}</span><img src="images/star.jpg" class="star">`)
+                .html(`<span class="response-name">${response.name}</span><img src="images/graystar.jpg" class="star">`)
 
         }
 
@@ -44,5 +44,15 @@ class Search {
         $.ajax(apiStuff);
 
     }
+    // $(".star").attr('src', "images/star.jpg");
+
+    // function changeStartColor() {
+    //     var starPicture = document.getElementById("img");
+    //     if (starPicture.style.display === "none") {
+    //         starPicture.style.display = "block";
+    //     } else {
+    //         starPicture.style.display = "none";
+    //     }
+    // }
 
 }

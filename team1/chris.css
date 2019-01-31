@@ -7,6 +7,10 @@ body {
 #favorite-list{
     color: white;
     font-size: 50px;
+    text-shadow: -1px -1px 0 yellow,
+    1px -1px 0 yellow,
+    -1px 1px 0 yellow,
+    1px 1px 0 yellow;
 }
 
 #navBar {
@@ -21,7 +25,14 @@ input {
     margin-top: 15px;
     color: white;
     font-size: 50px;
-
+    text-shadow: -1px -1px 0 yellow,
+    1px -1px 0 yellow,
+    -1px 1px 0 yellow,
+    1px 1px 0 yellow;
+}
+#ajax-response:hover {
+    background-color: gray;
+    opacity: 90%;
 }
 
 .star {
@@ -33,7 +44,10 @@ input {
     display: none;
     color: white;
     font-size: 50px;
-
+    text-shadow: -1px -1px 0 yellow,
+    1px -1px 0 yellow,
+    -1px 1px 0 yellow,
+    1px 1px 0 yellow;
 }
 
 #myImg {

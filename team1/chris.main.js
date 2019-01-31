@@ -31,6 +31,7 @@ function initializeApp(){
     var captionText = document.getElementById("caption");
 
     function clickModal() {
+        console.log('clicked modal');
         modal.style.display = "block";
         //incase image that doesn't work
         captionText.innerHTML = $(this).data('alt');
