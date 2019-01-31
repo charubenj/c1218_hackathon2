@@ -18,7 +18,7 @@ function initializeApp(){
     new Search();
 
 
-     var app=new App({
+     var app = new App({
         weatherButton: $("#getWeather"),
         weatherResult: $("#weatherResult"),
     });

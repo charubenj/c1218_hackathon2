@@ -1,11 +1,13 @@
 
 body {
-    background: url(images/brewery.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
+    background: url(images/brewery.jpg) no-repeat center center fixed;
+    background-size: cover;
+    /*background: url(images/brewery.jpg) ;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 0px;*/
 }
 
 .button{
@@ -36,7 +38,7 @@ body {
 
 .middleInfo {
     font-family: "Times New Roman", Times serif;
-    font-size: 55px;
+    font-size: 41px;
     font-style: italic;
     color: yellow;
 }
@@ -141,8 +143,9 @@ body {
     /*border-radius: 17%;*/
 
 /*}*/
-.container {
-    margin: 50px;
+.weatherMan {
+    width: 100%;
+    height: 100%;
 }
 
 .temperature{
@@ -236,3 +239,4 @@ body {
     text-rendering: auto;
 
 }
+
