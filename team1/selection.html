@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script type="text/javascript" src="api/weather.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="api/weatherapi.js"></script>
+    <script type="text/javascript" src="weather-app.js"></script>
+    <script type="text/javascript" src="weather-main.js"></script>
     <script type="text/javascript" src="search.js"></script>
     <link rel="stylesheet" href="style.css">
 
@@ -22,18 +22,36 @@
 <!--</div>-->
 
 
+
 <!--<div class="search">-->
     <!--<button id="searchButton">Search</button>-->
     <!--<input class="searchInput">-->
 <!--</div>-->
+ 
+<div class="container">
+    <div class="temperature">
+        <div class="avg-temp"></div>
+        <div class="min-temp"></div>
+        <div class="max-temp"></div>
+    </div>
+    <div id="currentDateandTime">
+        <div class="cityName"></div>
+        <div class="description"></div>
+        <div class="dateandtime"></div>
+    </div>
+</div>
 
-<div id="weatherResult">temp</div>
+<div class="search">
+    <button id="searchButton">Search</button>
+    <input class="searchInput">
+</div>
+
+<div id="weatherResult"></div>
 
 
 <div class="topPart"></div>
     <!--<a href="haze.html" class="questions"></a>-->
 <div class="middlePart"></div>
-
 <div class="navBar">
 
     <a href="chris.html" class="theGoogle" id="addSearchButton"></a>
@@ -41,10 +59,7 @@
     <a href="weather-index.html" class="sunButton" id="getWeather"></a>
     <div class="goldStar" ></div>
     <div class="taxi" id="lyft-web-button-parent"></div>
-
 </div>
-
-
 <script class="myTaxi" type="text/javascript">
     var OPTIONS = {
         scriptSrc: 'lyftWebButton.js',
