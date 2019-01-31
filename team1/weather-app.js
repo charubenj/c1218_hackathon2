@@ -36,6 +36,7 @@ class App {
                 object.avgtemp.html("Today's Avg Temp " + temp);
                 object.description.html(description);
                 $(".navBar").hide();
+                $(".search").hide();
 
             })
         })
