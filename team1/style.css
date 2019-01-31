@@ -22,6 +22,7 @@ body {
 .middleInfo,
 .info {
     width: 8em;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
@@ -38,7 +39,7 @@ body {
 
 .middleInfo {
     font-family: "Times New Roman", Times serif;
-    font-size: 41px;
+    font-size: 31px;
     font-style: italic;
     color: yellow;
 }
@@ -62,13 +63,13 @@ body {
 /*.beginButton:hover {*/
     /*opacity: 1;*/
 /*}*/
-/*.sunButton {*/
-    /*background-image: url("images/weather app.png");*/
-  /*}*/
+.sunButton {
+    background-image: url("images/weather.jpeg");
+  }
 
 
 #getWeather{
-    background: url("images/weather app.png") no-repeat left center;
+    background: url("images/weather.jpeg") no-repeat left center;
     background-repeat: no-repeat;
     background-position: left center;
     width: 25%;
@@ -139,7 +140,6 @@ body {
 .weatherMan {
     width: 100%;
     height: 100%;
-
 
 }
 
@@ -234,4 +234,5 @@ body {
     text-rendering: auto;
 
 }
+
 
