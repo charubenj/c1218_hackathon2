@@ -8,6 +8,9 @@ class App {
         //this.weather=this.weather.bind( this );
     }
 
+
+
+
 //{temp: 53.37, pressure: 1014, humidity: 86, temp_min: 46.94, temp_max: 59}
     addEventhandlers() {
         var weather = this.weather;
@@ -36,10 +39,13 @@ class App {
                 object.avgtemp.html("Today's Avg Temp " + temp);
                 object.description.html(description);
                 $(".navBar").hide();
+                $(".search").hide();
 
             })
         })
     }
+
+
 }
 
 
