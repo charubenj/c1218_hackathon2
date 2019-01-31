@@ -24,6 +24,8 @@ function initializeApp(){
          description:$(".description"),
 
 
+
     });
         app.addEventhandlers();
+
 }
