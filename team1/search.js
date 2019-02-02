@@ -6,6 +6,7 @@ class Search {
 
     addEventHandlers(){
         $('#searchButton').click(this.handleSearch);
+        // $(this).find('').hide();
     }
 
     handleSearch () {
@@ -27,7 +28,7 @@ class Search {
             $('#ajax-response').text(JSON.stringify(response.name));
     }
 
-        $('#ajax-response').text( );
+        $('#ajax-response').text();
         $.ajax(apiStuff);
     }
 }

@@ -20,6 +20,7 @@ function initializeApp(){
         $('h3.favoriteListContainer').show();
     });
 
+    //created a new instance of search to use methods from the search class
     new Search();
 
     // Get the modal
@@ -28,7 +29,7 @@ function initializeApp(){
     // // Get the image and insert it inside the modal - use its "alt" text as a caption
     // var img = document.getElementById('img1');
     // var modalImg = document.getElementById("img01");
-    var captionText = document.getElementById("caption");
+    // var captionText = document.getElementById("caption");
 
     function clickModal() {
         console.log('clicked modal');
