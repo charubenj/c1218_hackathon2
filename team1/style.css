@@ -1,11 +1,13 @@
 
 body {
-    background: url(images/brewery.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
+    background: url(images/brewery.jpg) no-repeat center center fixed;
+    background-size: cover;
+    /*background: url(images/brewery.jpg) ;*/
+    /*background-repeat: no-repeat;*/
+    /*background-size: 100% 100%;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*margin: 0px;*/
 }
 
 .button{
@@ -20,6 +22,7 @@ body {
 .middleInfo,
 .info {
     width: 8em;
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: auto;
@@ -36,7 +39,7 @@ body {
 
 .middleInfo {
     font-family: "Times New Roman", Times serif;
-    font-size: 55px;
+    font-size: 31px;
     font-style: italic;
     color: yellow;
 }
@@ -60,13 +63,13 @@ body {
 /*.beginButton:hover {*/
     /*opacity: 1;*/
 /*}*/
-/*.sunButton {*/
-    /*background-image: url("images/weather app.png");*/
-  /*}*/
+.sunButton {
+    background-image: url("images/weather.jpeg");
+  }
 
 
 #getWeather{
-    background: url("images/weather app.png") no-repeat left center;
+    background: url("images/weather.jpeg") no-repeat left center;
     background-repeat: no-repeat;
     background-position: left center;
     width: 25%;
@@ -118,7 +121,7 @@ body {
 }
 
 .goldStar {
-    background-image: url("images/goldStar.jpeg");
+    background-image: url("images/goldStar.jpg");
     background-repeat: no-repeat;
     background-position: left center;
     width: 25%;
@@ -127,8 +130,17 @@ body {
     margin: 30px;
 }
 
-.container {
-    margin: 50px;
+
+/*.goldStar .theGoogle .taxi .sunButton {*/
+    /*width: 25%;*/
+    /*height: 120px;*/
+    /*border-radius: 17%;*/
+
+/*}*/
+.weatherMan {
+    width: 100%;
+    height: 100%;
+
 }
 
 .temperature{
@@ -222,4 +234,5 @@ body {
     text-rendering: auto;
 
 }
+
 

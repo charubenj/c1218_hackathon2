@@ -32,10 +32,10 @@ class Search {
         //need function that adds the information grabbed from API to a div
         //this div should be called the favorite container
         function addResponseData(response) {
-            $('#ajax-response')
+            $('#ajax-response').html(`<span class="response-name">${response.name}</span><img src="images/goldStar.jpg" class="star">`)
             //find the ajax-response element
             //return the content of response.name into the span div,and add star image inline
-                .html(`<span class="response-name">${response.name}</span><img src="images/graystar.jpg" class="star">`)
+
 
         }
 

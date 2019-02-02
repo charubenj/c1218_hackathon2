@@ -37,7 +37,7 @@ $BUSINESS_PATH = "/v3/businesses/";  // Business ID will come after slash.
 // Defaults for our simple example.
 $DEFAULT_TERM = "dinner";
 $DEFAULT_LOCATION = "San Francisco, CA";
-$SEARCH_LIMIT = 3;
+$SEARCH_LIMIT = 10;
 
 
 /**
@@ -109,52 +109,16 @@ function search($term, $location) {
 }
 
 /**
- * Query the Business API by business_id
- *
- * @param    $business_id    The ID of the business to query
- * @return   The JSON response from the request
- */
-function get_business($business_id) {
-    $business_path = $GLOBALS['BUSINESS_PATH'] . urlencode($business_id);
-
-    return request($GLOBALS['API_HOST'], $business_path);
-}
-
-/**
  * Queries the API by the input values from the user
  *
  * @param    $term        The search term to query
  * @param    $location    The location of the business to query
  */
 function query_api($term, $location) {
-    $response = json_decode(search($term, $location));
-    $business_id = $response->businesses[0]->id;
+    $response = search($term, $location);
 
-    /*    print sprintf(
-            "%d businesses found, querying business info for the top result \"%s\"\n\n",
-            count($response->businesses),
-            $business_id
-        );
-      */
-    $response = get_business($business_id);
-
-//    print sprintf("Result for business \"%s\" found:\n", $business_id);
-    $pretty_response = json_encode(json_decode($response), JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
-    print "$pretty_response\n";
+    print $response;
 }
-
-/**
- * User input is handled here
- */
-$longopts  = array(
-    "term::",
-    "location::",
-);
-
-$options = getopt("", $longopts);
-
-$term = $options['term'] ?: $GLOBALS['DEFAULT_TERM'];
-$location = $options['location'] ?: $GLOBALS['DEFAULT_LOCATION'];
 
 query_api($_GET['term'], $_GET['location']);
 
