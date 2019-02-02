@@ -3,10 +3,10 @@ body {
     background-size: cover;
 
 }
-
+/*items under favorite list*/
 #favorite-list{
     color: white;
-    font-size: 50px;
+    font-size: 15px;
 }
 #navBar {
     text-align: center;
@@ -17,16 +17,17 @@ input {
 #ajax-response {
     margin-top: 15px;
     color: white;
-    font-size: 50px;
+    font-size: 20px;
 }
 .star {
-    width: 20px;
+    width: 15px;
 }
-/*hide favorite list container until clicked*/
+/*hide favorite list title
+need to make sure you can hide*/
 .favoriteListContainer {
     display: none;
     color: white;
-    font-size: 50px;
+    font-size: 15px;
 }
 #myImg {
     border-radius: 5px;
