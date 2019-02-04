@@ -2,7 +2,7 @@ body{
     height: 100vh;
     width:100%;
     background-repeat: no-repeat;
-    background: url("image/Irvine.jpg");
+    background: url("../image/Irvine.jpg");
     background-size: 100% 100%;
     margin: 0%;
     /* background-image: url("image/weather-image.jpg"); */
@@ -47,28 +47,28 @@ body{
 }
 
 .thunderstorm{
-background-image: url("image/thunderStrom.jpg");
+background-image: url("../image/thunderStrom.jpg");
 }
 
 .drizzle{
-    background-image: url("image/drizzle.png");
+    background-image: url("../image/drizzle.png");
 }
 .rain{
-    background-image:url("image/rainy.jpg");
+    background-image:url("../image/rainy.jpg");
 }
 .snow{
-    background-image: url("image/snow.jpg");
+    background-image: url("../image/snow.jpg");
 
 }
 .cloud{
-    background-image: url("image/cloudy.jpeg");
+    background-image: url("../image/cloudy.jpeg");
 }
  .atmosphere{
-     background-image: url("image/foggy2.jpg");
+     background-image: url("../image/foggy2.jpg");
  }
 
  .clear{
-     background-image: url("image/sunny_background.jpg");
+     background-image: url("../image/sunny_background.jpg");
  }
 
 

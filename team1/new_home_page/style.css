@@ -1,0 +1,414 @@
+body{
+
+     background-image: url("image_1/beer-at-brewery.jpg");
+    /* background-image: url("image_1/beer_image.jpg"); */
+    background-repeat:no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+/* .addImage{
+    height: 800px;
+    width:18000px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    float:left;
+    background-repeat:no-repeat;
+
+
+} */
+
+.logo{
+    display:block;
+    max-width: 300px;
+
+    margin: 0 auto;
+    width: 90%;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    color: saddlebrown;
+    text-shadow: -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
+
+
+#getWeather{
+    /* height : 150px; */
+    width : 120px;
+    /* margin-left: 45px; */
+
+}
+.goldStar{
+    /* height : 120px; */
+    width : 120px;
+    /* margin-left: 30px; */
+
+}
+
+.theGoogle{
+    width:140px;
+    /* height: 150px; */
+    /*  margin-left: 30px; */
+
+
+}
+
+
+
+div#lyft-web-button-parent{
+    height : 120px !important;
+    width : 120px !important;
+
+    /* margin-left: 30px; */
+
+}
+.lyft-web-button.large {
+     padding: 0px !important;
+     margin-top: 20px !important;
+    height: 130px !important;
+}
+
+.arrow-icon{
+    display:none !important;
+}
+
+
+.navbar {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+     background-image: url("image_1/wood.jpg");
+    /*  padding:20px; */
+    padding-bottom: 10px;
+    margin-left: -8px;
+}
+
+.navbar a {
+
+    margin-top:20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.navbar a:hover {
+    -webkit-box-shadow: 3px 3px 5px 6px saddlebrown;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    3px 3px 5px 6px saddlebrown; /* Firefox 3.5 - 3.6 */
+    box-shadow:         3px 3px 5px 6px saddlebrown;
+}
+
+navbar a.active {
+
+}
+
+@media only screen and (max-width: 768px){
+    #getWeather{
+        height : 60px;
+        width : 60px;
+        /* margin-left: 45px; */
+
+    }
+    .goldStar{
+        height : 60px;
+        width : 60px;
+        /* margin-left: 30px; */
+    }
+
+    .theGoogle{
+        width:60px;
+        height: 60px;
+        /*  margin-left: 30px; */
+
+    }
+
+    div#lyft-web-button-parent{
+        height : 60px !important;
+        width : 60px !important;
+        /* margin-left: 30px; */
+
+    }
+
+
+}
+
+.md-modal {
+    margin: auto;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 50%;
+    max-width: 630px;
+    min-width: 320px;
+    height: auto;
+    z-index: 2000;
+    visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.md-show {
+    visibility: visible;
+}
+
+.md-overlay {
+    position: fixed;
+    width: 100%;
+    height: 80%;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    opacity: 0;
+    background: rgba(#e4f0e3, 0.8);
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.md-show ~ .md-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.md-effect-12 .md-content {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.md-show.md-effect-12 ~ .md-overlay {
+    background-color: #e4f0e3;
+}
+
+.md-effect-12 .md-content h3,
+.md-effect-12 .md-content {
+    background: transparent;
+}
+
+.md-show.md-effect-12 .md-content {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+button.md-close {
+    display: block;
+    margin: 5% auto 0;
+
+    background: transparent;
+    border: 2px solid #444;
+    padding: 5px 10px;
+    margin-top: 40px;
+ }
+
+
+.temperature{
+    color: white;
+    font-size: 25px;
+    width: 250px;
+    width: 250px;
+    float: right!important;
+    position: relative;
+    padding-left: 15px;
+    height:170px;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+
+}
+
+.thunderstorm{
+    background-image: url("../image/thunderStrom.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.drizzle{
+    background-image: url("../image/drizzle.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.rain{
+    background-image:url("../image/rainy.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.snow{
+    background-image: url("../image/snow.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+.cloud{
+    background-image: url("../image/cloudy.jpeg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.atmosphere{
+    background-image: url("../image/foggy2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.clear{
+    background-image: url("../image/sunny_background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.cityName{
+    font-size: 40px;
+    margin-right: 12px;
+    width:200px;
+    margin-top: 20px;
+    width: 25%;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+.dateandtime{
+    color: white;
+    font-size: 20px;
+    margin-right: 12px;
+    width:200px;
+    height:160px;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+
+}
+
+#currentDateandTime{
+    color: #212121;
+    higth:100px;
+    width:200px;
+    color: whitesmoke;
+}
+
+.description{
+    font-size: 30px;
+    text-shadow: -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+
+}
+.input-data{
+    width:150px;
+    height:50px;
+    background-color: olive;
+    font-size: 20px;
+    padding: 0 3%;
+    border-radius: 20%;
+    text-rendering: auto;
+
+}
+#map{
+
+    width:100vh;
+    height:80vh;
+    position: static !important;
+    display: none;
+
+}
+
+#map-search{
+    display:none;
+}
+#google-information{
+    width:100vh;
+    height:80vh;
+    position:absolute;
+}
+
+.yelp-image{
+    width:200px;
+    height:200px;
+    margin: 5px;
+
+}
+
+/* #ajax-img .yelp-image:nth-child(1){
+    margin-left: 15px;
+    margin-right: 15px;
+} */
+
+#ajax-response{
+
+}
+
+#ajax-info{
+    display:flex;
+   /*  margin:2px; */
+    margin-right: 5px;
+}
+#ajax-categery{
+    display:flex;
+    margin-left: 5px;
+    margin-right:5px;
+}
+#ajax-categery>div{
+    margin:2px;
+    font-weight: bold;
+}
+
+#general-info{
+    margin:2px;
+    margin-right: 5px;
+
+    margin-left: 5px;
+}
+#timeing{
+    margin:2px;
+
+}
+
+#address>.name{
+    font-weight: bold;
+}
+
+#timeing>.startTime{
+    font-weight: bold;
+
+}
+
+.review-background{
+    background: linear-gradient(120deg, #af0606, #FFFFFF);
+}

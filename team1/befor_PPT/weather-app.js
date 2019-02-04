@@ -25,7 +25,7 @@ class App {
                 var description = weatherResponse.weather[0].description;
                 var forecast = weatherResponse.weather[0].description;
                 console.log(forecast);
-                $("body").addClass(forecastClass);
+                $(".md-overlay").addClass(forecastClass);
                 // var currentCityTemp = cityName + " max temp is " + maxTemp + "and min temp is " + maxTemp;
                 //object.weatherResult.html(currentCityTemp);
                 // object.cityName.html(currentCityTemp);
