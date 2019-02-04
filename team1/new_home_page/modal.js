@@ -3,7 +3,7 @@ $(document).ready(function () {
 
     $('.md-trigger').on('click', function () {
         $('.md-modal').addClass('md-show');
-        google.maps.event.trigger(map, "resize");
+        //google.maps.event.trigger(map, "resize");
         $('#map').hide();
         $("#map-search").hide();
     });

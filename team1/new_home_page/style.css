@@ -2,8 +2,6 @@ body{
 
      background-image: url("image_1/beer-at-brewery.jpg");
     /* background-image: url("image_1/beer_image.jpg"); */
-
-
     background-repeat:no-repeat;
     height: 100vh;
     background-position: center;
@@ -23,6 +21,22 @@ body{
 
 
 } */
+
+.logo{
+    display:block;
+    max-width: 300px;
+
+    margin: 0 auto;
+    width: 90%;
+    font-size: 60px;
+    font-style: italic;
+    font-weight: bold;
+    color: saddlebrown;
+    text-shadow: -1px -1px 0 white,
+    1px -1px 0 white,
+    -1px 1px 0 white,
+    1px 1px 0 white;
+}
 
 
 #getWeather{

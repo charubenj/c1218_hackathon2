@@ -55,7 +55,7 @@ class Search {
             var seeReview=response.messaging && response.messaging.url;
 
             //$('#ajax-response').text(JSON.stringify(response.name));
-            var showName=$("<div>").addClass("name").html(name1);
+            var showName=$("<div>").addClass("name").html(name1);// appending showName into dynamically created div
             $('#address').append(showName);
             var showAdress=$("<div>").addClass("address").html(address);
             $('#address').append(showAdress);
@@ -90,9 +90,7 @@ class Search {
                img3.attr('src', photo3);
                $('#ajax-img').append(img3);
            }
-
-
-            var showPrice=$("<div>").addClass("price").html("Price : "+ price);
+           var showPrice=$("<div>").addClass("price").html("Price : "+ price);
             $('#general-info').append(showPrice);
             var restoCategorie1=$("<div>").addClass("restoCategorie1").html(categorie1+",");
             $('#ajax-categery').append(restoCategorie1);

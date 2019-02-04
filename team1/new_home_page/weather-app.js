@@ -35,7 +35,7 @@ class App {
                 object.maxtemp.html("Maximum Temp : " + maxTemp);
                 object.avgtemp.html("Today's Avg Temp " + temp);
                 object.description.html(description);
-                $(".navBar").hide();
+
 
             })
         })
